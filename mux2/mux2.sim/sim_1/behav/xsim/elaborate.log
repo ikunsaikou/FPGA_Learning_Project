@@ -1,0 +1,14 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/hardware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a5125025721f40a7b53b3153cd5d5212 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot mux2_tb_behav xil_defaultlib.mux2_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/learn/FPGA/mux2/mux2.srcs/sources_1/new/mux2.v" Line 2. Module mux2 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux2
+Compiling module xil_defaultlib.mux2_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot mux2_tb_behav

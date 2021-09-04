@@ -1,0 +1,58 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Sep  3 09:27:28 2021
+# Process ID: 10732
+# Current directory: F:/learn/FPGA/mux2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6860 F:\learn\FPGA\mux2\mux2.xpr
+# Log file: F:/learn/FPGA/mux2/vivado.log
+# Journal file: F:/learn/FPGA/mux2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/learn/FPGA/mux2/mux2.xpr
+update_compile_order -fileset sources_1
+file mkdir F:/learn/FPGA/mux2/mux2.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open F:/learn/FPGA/mux2/mux2.srcs/sim_1/new/mux2_tb.v w ]
+add_files -fileset sim_1 F:/learn/FPGA/mux2/mux2.srcs/sim_1/new/mux2_tb.v
+update_compile_order -fileset sim_1
+launch_simulation
+source mux2.tcl
+update_compile_order -fileset sim_1
+launch_simulation
+source mux2_tb.tcl
+current_sim simulation_1
+close_sim
+add_bp {F:/learn/FPGA/mux2/mux2.srcs/sim_1/new/mux2_tb.v} 20
+remove_bps -file {F:/learn/FPGA/mux2/mux2.srcs/sim_1/new/mux2_tb.v} -line 20
+close_sim
+launch_simulation
+source mux2_tb.tcl
+close_sim
+launch_simulation
+source mux2_tb.tcl
+run all
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_simulation -mode post-implementation -type timing
+source mux2_tb.tcl
+run all
+set_property IOSTANDARD LVCMOS33 [get_ports [list a]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list b]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list out]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list sel]]
+place_ports a G22
+place_ports b D22
+place_ports out M22
+place_ports sel B22
+file mkdir F:/learn/FPGA/mux2/mux2.srcs/constrs_1/new
+close [ open F:/learn/FPGA/mux2/mux2.srcs/constrs_1/new/mux2.xdc w ]
+add_files -fileset constrs_1 F:/learn/FPGA/mux2/mux2.srcs/constrs_1/new/mux2.xdc
+set_property target_constrs_file F:/learn/FPGA/mux2/mux2.srcs/constrs_1/new/mux2.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+close_sim
+close_sim
