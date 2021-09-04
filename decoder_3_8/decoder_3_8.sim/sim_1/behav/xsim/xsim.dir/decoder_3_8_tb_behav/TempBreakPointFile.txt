@@ -1,0 +1,2 @@
+Breakpoint File Version 1.0
+34 true F:/learn/FPGA/decoder_3_8/decoder_3_8.srcs/sim_1/new/decoder_3_8_tb.v
